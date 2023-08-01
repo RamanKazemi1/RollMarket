@@ -1,0 +1,24 @@
+package com.example.market.model.local
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.example.market.model.data.Product
+
+@Dao
+interface ProductDao {
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertData( data :List<Product> )
+
+    @Query("SELECT * FROM product_table ")
+    suspend fun getAll() :List<Product>
+
+    @Query("SELECT * FROM product_table WHERE productId = :productId")
+    suspend fun getById( productId :String ) : Product
+
+    @Query("SELECT * FROM product_table WHERE category = :categoryName")
+    suspend fun getAllProductByCategory( categoryName :String ) : List<Product>
+
+}
