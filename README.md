@@ -11,6 +11,7 @@ this project is using : ->
 #7 :retrofit and api service with kotlin coroutines
 #8 :mvvm Architecture
 #9 :zarinPal payment Gateway
+#10 :liveData
 
                                        Main Screen (Products)
    ![Screenshot 2023-08-01 143520](https://github.com/RamanKazemi1/RollMarket/assets/138365131/6bd42445-0113-409f-936e-6d30010b4fcd)
